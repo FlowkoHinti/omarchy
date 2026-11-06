@@ -28,12 +28,9 @@ linux-headers
 linux-ptl
 linux-ptl-headers
 macbook12-spi-driver-dkms
-nvidia-580xx-dkms
 nvidia-dkms
 nvidia-open-dkms
-nvidia-580xx-utils
 nvidia-utils
-lib32-nvidia-580xx-utils
 lib32-nvidia-utils
 pipewire
 pipewire-alsa
