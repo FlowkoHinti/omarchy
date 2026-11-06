@@ -10,7 +10,6 @@ egl-wayland
 git
 gst-plugin-pipewire
 gtk4-layer-shell
-jdk-openjdk
 libpulse
 intel-media-driver
 libva-intel-driver
