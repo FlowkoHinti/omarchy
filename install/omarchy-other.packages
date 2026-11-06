@@ -2,10 +2,8 @@
 # Utilized by ISO builder to ensure package availability in the ISO
 
 autoconf-archive
-asusctl
 base
 base-devel
-broadcom-wl
 btrfs-progs
 dkms
 egl-wayland
@@ -36,8 +34,6 @@ snapper
 sof-firmware
 webp-pixbuf-loader
 yay-debug
-tuxedo-drivers-nocompatcheck-dkms
-yt6801-dkms
 zram-generator
 
 # Intel encoding processing
@@ -50,12 +46,9 @@ vulkan-radeon
 vulkan-asahi
 
 # Surface laptop support packages
-linux-firmware-marvell
 
 # Dell laptop support packages
-dell-xps-touchpad-haptics
 
 # T2 MacBook support packages
 
 # Framework 16
-qmk-hid
