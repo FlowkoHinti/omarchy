@@ -3,11 +3,27 @@
 # omarchy:summary=Launch a URL as a web app in the default supported browser
 # omarchy:args=<url>
 
+# Print the first of the given desktop files that is installed, else the last one.
+first_installed_desktop() {
+  local name dir
+  for name in "$@"; do
+    for dir in ~/.local ~/.nix-profile /usr; do
+      if [[ -f $dir/share/applications/$name ]]; then
+        echo "$name"
+        return
+      fi
+    done
+  done
+  echo "${!#}"
+}
+
 browser=$(omarchy-cmd-default-browser)
 
+# Web apps need a Chromium-based browser; a different default (e.g. Firefox)
+# falls back to an installed one.
 case $browser in
 google-chrome* | brave* | microsoft-edge* | opera* | vivaldi* | helium*) ;;
-*) browser="chromium.desktop" ;;
+*) browser=$(first_installed_desktop brave-browser.desktop chromium.desktop) ;;
 esac
 
 browser_exec=$(sed -n 's/^Exec=\([^ ]*\).*/\1/p' {~/.local,~/.nix-profile,/usr}/share/applications/$browser 2>/dev/null | head -1)
