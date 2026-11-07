@@ -53,7 +53,3 @@ linux-firmware-cirrus-dx13260
 lsp-plugins-lv2
 
 # T2 MacBook support packages
-apple-bcm-firmware-fetcher
-
-# Framework 16
-qmk-hid

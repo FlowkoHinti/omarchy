@@ -11,8 +11,6 @@ if cat /sys/class/dmi/id/sys_vendor 2>/dev/null | grep -qi "TUXEDO\|Slimbook"; t
 
   # Remove any orphaned clevo_xsm_wmi module files not managed by a package
   for f in /lib/modules/*/extra/clevo-xsm-wmi.ko; do
-    if [[ -f $f ]]; then
-      rm "$f"
-    fi
+    [ -f "$f" ] && rm "$f"
   done
 fi

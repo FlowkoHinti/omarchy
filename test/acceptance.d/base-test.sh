@@ -42,7 +42,7 @@ screen_contains() {
     rm -f "$snapshot"
     return 1
   fi
-  tesseract "$snapshot" stdout --psm 11 2>/dev/null | grep -Fi -- "$text" >/dev/null
+  tesseract "$snapshot" stdout --psm 11 2>/dev/null | grep -Fqi -- "$text"
   local status=$?
   rm -f "$snapshot"
   return $status
