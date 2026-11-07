@@ -5,6 +5,14 @@
 # omarchy:examples=omarchy update | omarchy update -y
 # omarchy:requires-sudo=true
 
+# >>> flowmarchy (owned path; see settings.owned_paths)
+flowmarchy_bin=$(command -v flowmarchy || echo "$HOME/.local/bin/flowmarchy")
+if [[ -z ${FLOWMARCHY_PASSTHROUGH:-} && -x $flowmarchy_bin ]]; then
+  export FLOWMARCHY_STOCK=$0
+  exec "$flowmarchy_bin" update "$@"
+fi
+# <<< flowmarchy
+
 set -e
 
 if [[ -z ${OMARCHY_UPDATE_LOGGED:-} ]]; then
