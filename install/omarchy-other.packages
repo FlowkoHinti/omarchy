@@ -4,10 +4,10 @@
 autoconf-archive
 base
 base-devel
+broadcom-wl-dkms
 btrfs-progs
 dkms
 egl-wayland
-git
 gst-plugin-pipewire
 gtk4-layer-shell
 libpulse
@@ -17,9 +17,9 @@ libva-nvidia-driver
 limine
 limine-mkinitcpio-hook
 limine-snapper-sync
-linux
 linux-firmware
-linux-headers
+linux-omarchy
+linux-omarchy-headers
 nvidia-dkms
 nvidia-open-dkms
 nvidia-utils
@@ -47,7 +47,13 @@ vulkan-asahi
 # Surface laptop support packages
 
 # Dell laptop support packages
+linux-firmware-cirrus-dx13260
+
+# Speaker tunings (LV2 limiter every tuning ends in)
+lsp-plugins-lv2
 
 # T2 MacBook support packages
+apple-bcm-firmware-fetcher
 
 # Framework 16
+qmk-hid
