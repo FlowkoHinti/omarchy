@@ -68,6 +68,9 @@ run_first_run_step() {
   fi
 }
 
+run_first_run_step "install Voxtype post-update hook" \
+  omarchy-hook-install post-update "$OMARCHY_PATH/install/user/first-run/install-voxtype.hook"
+
 run_first_run_step "enable user systemd units" \
   bash "$OMARCHY_PATH/install/user/first-run/enable-user-units.sh"
 # Finalization ran it too, maybe without a session; the platform finishes what
@@ -80,9 +83,6 @@ run_first_run_step "set GTK primary paste" \
   bash "$OMARCHY_PATH/install/user/first-run/gtk-primary-paste.sh"
 
 omarchy-notification-wait || log_first_run "Timed out waiting for notification service; continuing"
-# Superwhisper places its bar panel through the shell, so it waits for it too.
-run_first_run_step "configure Superwhisper dictation" \
-  bash "$OMARCHY_PATH/install/user/first-run/superwhisper.sh"
 # Each send returns only once the server has taken the toast, so sending in
 # order is enough to stack them newest-on-top.
 run_first_run_step "show welcome notification" \
