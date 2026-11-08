@@ -59,6 +59,8 @@ if gum confirm --affirmative "$(omarchy-i18n common.yes)" --negative "$(omarchy-
     xournalpp \
     pinta \
     obsidian \
+    obs-studio \
+    kdenlive \
     moonlight-qt \
     omacut \
     monologue \
