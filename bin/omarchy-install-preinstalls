@@ -20,6 +20,7 @@ if gum confirm --affirmative "$(omarchy-i18n common.yes)" --negative "$(omarchy-
     aether \
     cliamp \
     libreoffice-fresh \
+    xournalpp \
     pinta \
     obsidian \
     moonlight-qt \
@@ -27,8 +28,7 @@ if gum confirm --affirmative "$(omarchy-i18n common.yes)" --negative "$(omarchy-
     monologue \
     omacalc \
     omawrite \
-    hype \
-    signed; then
+    hype; then
     echo -e "\nPreinstalls are still marked as removed. Fix the errors above and try again."
     exit 1
   fi

@@ -125,7 +125,6 @@ quickshell
 ripgrep
 ruby
 sddm
-signed
 slurp
 socat
 starship
@@ -158,6 +157,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-terminal-exec
 xorg-xsetroot
+xournalpp
 yaru-icon-theme
 yay
 yt-dlp
